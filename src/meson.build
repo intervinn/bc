@@ -1,0 +1,1 @@
+executable('bc', 'main.c', 'io.c', 'tok.c')
