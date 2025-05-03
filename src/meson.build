@@ -1,1 +1,1 @@
-executable('bc', 'main.c', 'io.c', 'tok.c')
+executable('bc', 'main.cpp', 'token.cpp', dependencies: [fmt_dep])

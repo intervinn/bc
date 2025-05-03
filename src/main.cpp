@@ -1,6 +1,3 @@
-#include "io.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /*
 possible syntax:
@@ -28,9 +25,12 @@ out(num);
 
 */
 
+#include "token.hpp"
+#include <iostream>
+
 int main() {
-    char* hi = malloc(0);
-    size_t size = rline(hi, stdin);
-    printf("%s\n", hi); 
-    free(hi);
+    auto toks = bc::parse("1()[]");
+    for (auto tok : toks) {
+        std::cout << std::to_string(tok.kind) << std::endl;
+    }
 }
